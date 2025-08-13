@@ -1,9 +1,11 @@
+// cursor.js
+
 window.onload = function()
 {
     const cursor_bg = document.getElementById("cursor_bg");
-    // const ds_ico = document.getElementById("ds_ico");
-    const mail_ico = document.getElementById("mail_ico");
+    
     var content = document.getElementById("content");
+    var content_rect = content.getBoundingClientRect();
 
     content.style.borderColor = 'rgba(139, 104, 107, 0.48)';
 
@@ -12,6 +14,10 @@ window.onload = function()
     onresize = (event) => {
         content = document.getElementById("content");
     };
+
+    const content_x = content_rect.left+(content_rect.width/2);
+    const content_y = content_rect.top+(content_rect.height/2);
+    const aspect_ratio = content_rect.width/content_rect.height;
 
     document.body.onpointermove = event =>
     {
@@ -28,13 +34,6 @@ window.onload = function()
             }
         )
 
-        const content_rect = content.getBoundingClientRect();
-        const content_w = content_rect.width;
-        const content_h = content_rect.height;
-        const content_x = content_rect.left+(content_w/2);
-        const content_y = content_rect.top+(content_h/2);
-        const aspect_ratio = content_w/content_h;
-
         const x_dist = (clientX-content_x);
         const y_dist = (clientY-content_y)*aspect_ratio; // this avoids getting more oppacity in the X axis than in the Y
 
@@ -42,27 +41,15 @@ window.onload = function()
 
         var alpha = ((hip_size*100)/(content_y/2)-100); // gets the percentage of distance to get the desired opacity
 
-        if (x_dist >= content_w/2 || x_dist <= (content_w/2)*-1 ||
-            y_dist >= content_h/2 || y_dist <= (content_h/2)*-1)
+        if (x_dist >= content_rect.width/2 || x_dist <= (content_rect.width/2)*-1 ||
+            y_dist >= content_rect.height/2 || y_dist <= (content_rect.height/2)*-1)
             content.style.borderColor = 'rgba(139, 104, 107, 0.48)';
         else if (alpha >= 120 && alpha <= 240)
         content.animate(
-            { borderColor: 'rgba(139, 104, 107, '+ alpha/400 +')' },
+            { borderColor: 'rgba(139, 104, 107, '+ alpha/300 +')' },
             { duration: 5, fill: "forwards" }
         )
 
         // console.log(alpha.toString());
     }
-
-    /*
-        // Uh oh, this was meant to be deleted, but since you're here,
-        // as reward I give you my Discord contact.
-        // (which is inside the funcion)
-        
-        ds_ico.onclick = copy;
-        function copy() { navigator.clipboard.writeText('usr.mariejeanne'); }
-    */
-
-    mail_ico.onclick = redirect;
-    function redirect() { window.location.href = "mailto:mail.maryjamesb@gmail.com"; }
 }
