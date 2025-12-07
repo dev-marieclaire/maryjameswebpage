@@ -19,7 +19,8 @@
 }
 .content_item:hover
 {
-    background-color: rgba(26, 26, 26, 0.48);
+    backdrop-filter: blur(2px);
+    background-color: #1a1a1a3d;
     transition: background-color 0.25s linear;
 }
 
@@ -45,9 +46,7 @@
 .image_container > img:hover
 {
     width: 100%;
-    /*transform: translateX(-7%);*/
     transition: width 0.5s cubic-bezier(.2,.56,.6,.87);
-    /*transition: transform 0.5s cubic-bezier(.2,.56,.6,.87);*/
 }
 
 .uitext_container
