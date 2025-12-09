@@ -11,7 +11,7 @@ window.onload = function()
         // (which is inside the funcion)
         
         ds_ico.onclick = copy;
-        function copy() { navigator.clipboard.writeText('usr.mariejeanne'); }
+        function copy() { navigator.clipboard.writeText('lefilleimpressionniste'); }
     */
 
     mail_ico.onclick = redirect;

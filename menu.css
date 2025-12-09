@@ -1,0 +1,114 @@
+/* Menu */
+#menu
+{
+    /* Sets its own size */
+    flex: 1.25;
+
+    /* Sets the flex config. */
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    user-select: none;
+
+    /* Style and color */
+    background-color: #2626267a;
+    backdrop-filter: blur(1.45px);
+
+    border: solid 2px #1a1a1a3d;
+    border-radius: 12px;
+
+    transition: background-color 0.25s linear;
+}
+#menu:hover
+{
+    backdrop-filter: blur(2px);
+    background-color: #262626a4;
+    transition: background-color 0.25s linear;
+}
+
+#button_container
+{
+    width: 82%;
+    
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    
+    margin: 16px;
+}
+
+.button
+{
+    flex: 1;
+
+    cursor: pointer;
+
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    color: #F4F4F4;
+
+    background-color: #2c2c2c7a;
+
+    border: solid 1.5px #1a1a1aa4;
+    border-radius: 8px;
+    margin: 4px;
+
+    transition: border 0.5s cubic-bezier(.2,.56,.6,.87);
+    transition: background-color 0.5s cubic-bezier(.2,.56,.6,.87);
+}
+.button:hover
+{
+    border: solid 1.5px #f4f4f41f;
+    transition: border 0.5s cubic-bezier(.2,.56,.6,.87);
+
+    background-color: #533F3Fa4;
+    transition: background-color 0.5s cubic-bezier(.2,.56,.6,.87);
+}
+
+/* Home icon */
+
+#home_button
+{
+    flex: 3;
+    width: 72%;
+
+    font-family: Mulish;
+    font-weight: 300;
+
+    color: #F4F4F4;
+    text-decoration: none;
+    
+    cursor: pointer;
+}
+
+/* Contact */
+#contact
+{
+    flex: 0.5;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    gap: 16px;
+    margin: 16px;
+}
+
+#contact > p
+{
+    margin: 0%;
+
+    text-align: center;
+    font-size: 2.125ch;
+    /* color: #FCD8D8; */
+    color: #f4f4f4;
+}
+
+.icon { height: 36px; }
+.icon:hover { cursor: pointer; }

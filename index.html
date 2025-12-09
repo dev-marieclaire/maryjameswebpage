@@ -5,13 +5,15 @@
     <title>Mary James</title>
     <link rel="icon" href="img/icons/gclef_320px.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="shared_style.css">
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="work_card.css">
 
     <script src="./scripts/contact.js"></script>
-    <!-- <script src="./scripts/cursor.js"></script> -->
-    <script src="./scripts/works.js"></script>
+    <script src="./scripts/content.js"></script>
 
+    <!-- Loads the respective fonts. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -28,17 +30,17 @@
 
             <!-- Buttons -->
             <div id="button_container">
-                <a href="works.html" class="button">works</a>
-                <a href="faq.html" class="button">FAQ</a>
+                <div class="button" id="works_button">works</div>
+                <div class="button" id="faq_button">FAQ</div>
+                <!-- due to optimization issues I'll fix, hopefully, tomorrow; this will remain unactive -->
+                <!-- <div class="button" id="gallery_button">Gallery</div> -->
             </div>
 
             <!-- Logo and display text which return to the main page. -->
-            <div id="home">
-                <!-- <img src="img/icons/gclef.png"> -->
-                <a href="#">Mary James</a>
+            <div id="home_button">
+                Marie-Claire Isabelle
             </div>
 
-            
             <div id="contact">
                 <p>contact me</p>
                 <img src="img/icons/Mail.png" class="icon" id="mail_ico">
@@ -46,16 +48,11 @@
         </div>
         
         <div id="content">
+            <div id="highlight">Claire's portfolio</div>
             <!-- <img src="img/icons/gclef.png" id="logo"> -->
-            <div id="content_container">
-                <div class="highlight">Mary James' archive website</div>
-                <hr class="breaktype1">
-                <div>Hi, and welcome to the website that I will use as an archive for my work.</div>
-                <!-- <hr class="breaktype1">
-                <div>Brief autobiography:</div>
-                <hr class="breaktype2">
-                <div>I was born on October 10, 2007. From a very young age I developed an interest in music and computers; I learned to write computer programs when I was 12 and started being a musician at 9. My beginnings in music creation were when I started writing arrangements of songs and pieces that I liked for string ensembles at age 11, some time later I went further and at the end of my 12th year I wrote my first composition.</div> -->
-            </div>
+            <div id="txt_container"></div>
+            <div id="ouvre_container"></div>
+            <div id="im_container"></div>
         </div>
     </div>
 </body>
