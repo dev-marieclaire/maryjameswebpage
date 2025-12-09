@@ -188,7 +188,7 @@ const im =
 window.onload = function()
 {
     let txt_container = document.getElementById("txt_container");
-    let ouv_container = document.getElementById("ouvre_container");
+    let ouvre_container = document.getElementById("ouvre_container");
     let im_container = document.getElementById("im_container");
 
     // Sets the default text.
@@ -199,19 +199,19 @@ window.onload = function()
     {
         if (event.target.id == "faq_button")
         {
-            im_container.innerHTML = ouv_container.innerHTML = '';
+            im_container.innerHTML = ouvre_container.innerHTML = '';
             current_text = text[1];
             txt_container.innerText = current_text.txt_container+current_text.prolongation;
         }
         if (event.target.id == "home_button")
         {
-            im_container.innerHTML = ouv_container.innerHTML = '';
+            im_container.innerHTML = ouvre_container.innerHTML = '';
             current_text = text[0];
             txt_container.innerText = current_text.txt_container+current_text.prolongation;
         }
         if (event.target.id == "gallery_button")
         {
-            im_container.innerHTML = ouv_container.innerHTML = '';
+            im_container.innerHTML = ouvre_container.innerHTML = '';
             for (i = 0; i<im.length; i++)
             {
                 let im_item = document.createElement("img");
@@ -230,8 +230,8 @@ window.onload = function()
                 fiche.setAttribute("class", "content_item");
 
                 // Creates a container for the cover image.
-                let img_container = document.createElement("div");
-                img_container.setAttribute("class", "img_carre");
+                let couverture_container = document.createElement("div");
+                couverture_container.setAttribute("class", "couverture_container");
 
                 // Creates a container for the links.
                 let lien_container = document.createElement("div");
@@ -269,17 +269,17 @@ window.onload = function()
                 //     partition_item.innerText = "Comming soon.";
 
                 // if the item needs a container for appropiate align, it gets added to a child element first.
-                img_container.appendChild(item_couverture);
+                couverture_container.appendChild(item_couverture);
                 lien_container.appendChild(item_stream);
                 lien_container.appendChild(item_partition);
 
                 // Then, that child is added to the tree of the work's respective card.
-                fiche.appendChild(img_container);
+                fiche.appendChild(couverture_container);
                 fiche.appendChild(item_nom);
                 fiche.appendChild(lien_container);
 
                 // To finally, insert the card inside the main canvas.
-                ouv_container.appendChild(fiche);
+                ouvre_container.appendChild(fiche);
             }
         }
     }

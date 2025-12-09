@@ -37,7 +37,7 @@
     transition: background-color 0.25s linear;
 }
 
-.img_carre
+.couverture_container
 {
     width: 100%;
     aspect-ratio: 1;
@@ -47,14 +47,14 @@
     align-items: center;
 }
 
-.img_carre > img
+.couverture_container > img
 {
     width: 90%;
     border-radius: 16px;
 
     transition: width 0.5s cubic-bezier(.2,.56,.6,.87);
 }
-.img_carre > img:hover
+.couverture_container > img:hover
 {
     width: 100%;
     transition: width 0.5s cubic-bezier(.2,.56,.6,.87);
@@ -65,7 +65,7 @@
     max-width: 90%;
     font-weight: 250;
     text-align: justify;
-    font-size: larger;
+    font-size: 21px;
     color: #f4f4f4;
 }
 
